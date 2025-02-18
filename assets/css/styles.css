@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Arial, sans-serif;
+}
+
+/* Define primary and secondary colors */
+:root {
+  --primary-color: #ffffff;
+  --secondary-gradient: linear-gradient(to right, #f7efc1, #e0bc6b);
+  --tertiary-color: #232323;
+}
+
+.main-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url("../images/banner-image.jpeg");
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  transform: rotate(-180deg);
+  z-index: -1;
+}
+.glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(3, 3, 3, 0.051),
+    rgba(0, 0, 0, 0.438)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 90px;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo-image img {
+  width: 118px;
+}
+
+.list-items ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+.list-items ul li {
+  display: inline;
+}
+.list-items ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--primary-color);
+}
+
+.login-btn {
+  padding: 6px 32px;
+  background: var(--secondary-gradient);
+  border-radius: 24px;
+  color: var(--tertiary-color) !important;
+}
+.header-content {
+  position: relative;
+  top: 30%;
+  left: 5%;
+  color: var(--primary-color);
+}
+.header-heading {
+  font-weight: 400;
+  font-size: 80px;
+}
+.header-text {
+  font-weight: 700;
+  font-size: 76px;
+}
+.header-para {
+  line-height: 27px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.header-button{
+  position: relative;
+  padding: 6px 32px;
+  background: var(--secondary-gradient);
+  border-radius: 24px;
+  color: var(--tertiary-color) !important;
+  border: none;
+  cursor: pointer;
+  top: 60px;
+}
+
+.header-icon {
+    width: 64px;
+    position: absolute;
+    left: 85%;
+    top: 140%;
+}
