@@ -1,3 +1,8 @@
+
+document.querySelector(".header-icon").addEventListener("click", function () {
+  document.querySelector(".about-section").scrollIntoView({ behavior: "smooth" });
+});
+
 const cardData = [
   { number: '01', title: 'Celebrate Diversity', summary: 'Showcasing cuisines from North, South, East, and West.' },
   { number: '02', title: 'Plant-Based Excellence', summary: 'add text here' },
@@ -82,3 +87,79 @@ document.querySelectorAll(".content-text").forEach((contentText) => {
 
     chefeContainer.appendChild(chefCardContainer);
   });
+
+  // FAQ section 
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqContainer = document.querySelector(".FAQ-info");
+
+    const faqData = [
+        {
+            question: "What type of cuisine does Plate of Africa serve?",
+            answer: "An AI agent (Artificial Intelligence agent) is a computer system or software entity that can perceive its environment, process information, and take actions to achieve specific goals.",
+        },
+        {
+            question: "Where do you source your ingredients from?",
+            answer: "add text here .",
+        },
+        {
+            question: "Do you offer takeout or delivery services?",
+            answer: "add text here.",
+        },
+        {
+            question: "How can I provide feedback about my experience?",
+            answer: "add text here",
+        },
+        {
+          question: "Is there a dress code at Plate of Africa?",
+          answer: "add text here",
+      },
+    ];
+
+    // Generate FAQ cards dynamically
+    faqData.forEach(({ question, answer }) => {
+        const faqHTML = `
+            <div class="FAQ-message-section">
+                <div class="FAQ-content">
+                    <p class="FAQ-text">${question}</p>
+                    <span class="FAQ-icon"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="FAQ-para-wrapper">
+                    <p class="FAQ-para">${answer}</p>
+                </div>
+            </div>
+        `;
+        faqContainer.innerHTML += faqHTML;
+    });
+
+    // Attach event listeners to handle toggle functionality
+    document.querySelectorAll(".FAQ-content").forEach((faq) => {
+        faq.addEventListener("click", function () {
+            const wrapper = this.nextElementSibling;
+            const icon = this.querySelector(".FAQ-icon i");
+
+            // Close any open FAQ before opening a new one
+            document.querySelectorAll(".FAQ-para-wrapper").forEach((otherWrapper) => {
+                if (otherWrapper !== wrapper) {
+                    otherWrapper.style.maxHeight = null;
+                    otherWrapper.previousElementSibling.querySelector(".FAQ-icon i").classList.replace("fa-minus", "fa-plus");
+                    otherWrapper.previousElementSibling.classList.remove("active");
+                }
+            });
+
+            // Toggle the clicked FAQ
+            if (wrapper.style.maxHeight) {
+                wrapper.style.maxHeight = null;
+                icon.classList.replace("fa-minus", "fa-plus");
+                this.classList.remove("active");
+            } else {
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                icon.classList.replace("fa-plus", "fa-minus");
+                this.classList.add("active");
+            }
+        });
+    });
+});
+document.querySelector(".FAQ-icon").addEventListener("click", function () {
+  document.querySelector(".main-header").scrollIntoView({ behavior: "smooth" });
+});
