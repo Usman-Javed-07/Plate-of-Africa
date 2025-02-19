@@ -815,6 +815,7 @@ margin-top: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
+
 }
 .menu-text {
   display: flex;
@@ -838,14 +839,37 @@ margin-top: 30px;
 }
 .appetizer-section {
   background: #000;
-  height: 100vh;
   margin-top: 0px;
   padding-top: 0px;
+  position: relative;
+}
+.appetizer-section::before {
+  content: "";
+  background: url("../images/menu-before.png") no-repeat center/cover;
+  width: 175px;
+  height: 240px;
+  display: block;
+  z-index: 1;
+  top: 0%;
+  right: 0%;
+  position: absolute;
+}
+.appetizer-section::after {
+  content: "";
+  background: url("../images//menu-after.png") no-repeat center/cover;
+  width: 375px;
+  height: 440px;
+  display: block;
+  z-index: 1;
+  bottom: 0%;
+  left: 0%;
+  position: absolute;
+}
+.appetizer-container {
+  padding-bottom: 90px;
 }
 .appetizer-links {
   margin-top: -20px !important;
   padding-top: 7%;
-}
-.Appetizers-items {
-
+  
 }
