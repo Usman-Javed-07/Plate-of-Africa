@@ -56,7 +56,7 @@
                 <img src="./assets/images/aboutdish2.svg" class="half-img" alt="Second Image">
                 <img src="./assets/images/aboutdish3.svg" class="half-img" alt="Third Image">
             </div>
-            <div class="about-text">
+            <div class="about-text main--text">
                 <p class="about-name">About</p>
                 <h2 class="about-heading">PLATE OF AFRICA</h2> <br><br>
                 <p>
@@ -96,8 +96,8 @@
                 <img src="./assets/images/foundimage.svg" alt="dish image">
             </div>
             <div>
-                 <!-- getting card dynamicaly using js  -->
-            <!-- <div class="found-content">
+                <!-- getting card dynamicaly using js  -->
+                <!-- <div class="found-content">
                 <div class="content-text">
                     <p class="content-number">01</p>
                     <p class="content-para">Celebrate Diversity:</p>
@@ -105,25 +105,91 @@
                 </div>
                 <summary class="found-summary">Showcasing cuisines from North, South, East, and West.</summary>
             </div> -->
-            <div id="cards-container"></div>
+                <div id="cards-container"></div>
 
-        </div>
+            </div>
         </div>
     </section>
 
     <!-- explore us -->
     <section class="explore-us">
-       <h3 class="explore-heading">Explore Our Menu</h3>
-       <div class="explore-link">
-        <ul>
-            <li><a href="#">All</a></li>
-            <li><a href="#">Appetizers</a></li>
-            <li><a href="#">Entres</a></li>
-            <li><a href="#">Main Courses</a></li>
-        </ul>
+        <h3 class="explore-heading">Explore Our Menu</h3>
+        <div class="explore-link">
+            <ul class="explore-items">
+                <li class="page-all--link"><a href="#">All</a></li>
+                <li><a href="#">Appetizers</a></li>
+                <li><a href="#">Entres</a></li>
+                <li><a href="#">Main Courses</a></li>
+            </ul>
+        </div>
 
-       </div>
+        <!-- explore card -->
+        <div class="explore-card--section">
+            <div class="explore-card">
+                <div class="cart-detail">
+                    <div class="cart1-image">
+                        <img src="./assets/images/explore-cart1.svg" alt="explore card iamge">
+                    </div>
+                    <div class="card-items--name">
+                        <h3>Vegetable Skewers</h3>
+                        <p>$50.42</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Flavor Harmony</p>
+                        <img src="./assets/images/cartvector.png" alt="cart vector">
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+
+            <div class="explore-card">
+                <div class="cart-product">
+                    <div class="cart-image">
+                        <img src="./assets/images/explore-cart2.svg" alt="explore card iamge">
+                    </div>
+                    <h3 class="cart-product-heading">Bunny Chow</h3>
+
+                </div>
+            </div>
+            <!--  -->
+
+            <div class="explore-card">
+                <div class="cart-product">
+                    <div class="cart-image">
+                        <img src="./assets/images/explore-cart3.svg" alt="explore card iamge">
+                    </div>
+                    <h3 class="cart-product-heading">Peanut Soup</h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="explore-us--btn">
+            <button>Explore More</button>
+        </div>
     </section>
+    <!-- section chefs -->
+     <section class="chefe-section">
+        
+        <div class="chefe-container">
+           <h3>MEET THE CHEFS</h3>
+        </div>
+        <div class="chefe">
+            <!-- chef card show dynamically here  -->
+        <div class="chef-card--container">
+            <div class="chef-card">
+              <div class="chefe-image">
+                <img src="./assets/images/chef1.png" alt="chefe image">
+              </div>
+              <div class="chef-info">
+              <h2>Kwame</h2>
+              <p>Head</p>
+               <a href="#">Visit Chef</a>
+            </div>
+            </div>
+        </div>
+    </div>
+     </section>
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
